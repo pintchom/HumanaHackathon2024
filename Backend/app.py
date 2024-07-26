@@ -26,3 +26,4 @@ def add_medication():
     instructions = data.get('instructions')
     returnMessage = fb.addMedication(userId, name, daily_schedule, dosage, instructions)
     return jsonify(returnMessage)
+

@@ -29,6 +29,18 @@ def update_entry(userId: str, field: str, newVal: str) -> bool:
     except:
         return False
 
+def update_provider_entry(userId: str, field: str, newVal: str) -> bool:
+    try:
+        data = get_user_data(userId)
+        data1 = data['provider']
+        dataToEdit = data1[field]
+        dataToEdit[field] = newVal
+
+        db.collection('users').document(userId).update({'provider': dataToEdit})
+        return True
+    except:
+        return False
+
 def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     curDic = get_user_data(userId)
     curDic = curDic["Medication"]
@@ -61,7 +73,8 @@ def addToStaticSchedule(userId: str, medicDic):
     
 def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     data = get_user_data(userId)
-    refills = data['refill_requests']
+    data1 = data['provider']
+    refills = data1['refill_requests']
 
     drugDic = {}
     drugDic['completed'] = False
@@ -72,10 +85,16 @@ def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructi
     
     refills.append(drugDic)
 
-    if update_entry(userId, 'refill-requests', refills): return "success"
+    if update_provider_entry(userId, 'refill_requests', refills): return "success"
     else: return "fail"
 
 def repopulateDailySchedule(userId: str):
     data = get_user_data(userId)
     statSchedule = data['static_schedule']
     update_entry(userId, 'daily_schedule', statSchedule)
+
+print(get_user_data('1'))
+#requestRefill('1', 'test', ['7:00'], '10mg', 'eat fast')
+print(update_provider_entry('1', 'name', 'Dr Oz'))
+print('\n')
+print(get_user_data('1'))
