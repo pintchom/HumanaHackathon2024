@@ -3,9 +3,7 @@ from click.types import STRING
 from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
-from flask.scaffold import T_route
 from datetime import datetime
-
 
 load_dotenv()
 
@@ -19,7 +17,6 @@ def get_user_data(userId: str):
 
     if user_doc.exists:
         user_data = user_doc.to_dict()
-        print(user_data)
         return user_data
     else:
         print(f"No user found with id: {userId}")
@@ -34,8 +31,18 @@ def update_entry(userId: str, field: str, newVal) -> bool:
         print(f"Error updating entry: {e}")  
         return False
 
+def update_provider_entry(userId: str, field: str, newVal: str) -> bool:
+    try:
+        data = get_user_data(userId)
+        data1 = data['provider']
+        data1[field] = newVal
+
+        db.collection('users').document(userId).update({'provider': data1})
+        return True
+    except:
+        return False
+
 def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
-    print(daily_schedule)
     userData = get_user_data(userId)
     curDic = userData.get("Medication", {})
     if name in curDic.keys(): 
@@ -49,7 +56,6 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
         'instructions': instructions
     }
     curDic[name] = drugDic
-    print(curDic)
 
     # Get the static_schedule from the root of userData, not from curDic
     static_schedule = userData.get("static_schedule", [])
@@ -76,6 +82,48 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
 def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     data = get_user_data(userId)
     refills = data['provider']['refill-requests']
+    curDic = get_user_data(userId)
+    curDic = curDic["Medication"]
+
+    if name in curDic.keys(): return "Medication already in database"
+
+    drugDic = {}
+    drugDic['completed'] = False
+    drugDic['daily_schedule'] = daily_schedule
+    drugDic['dosage'] = dosage
+    drugDic['empty'] = False
+    drugDic['instructions'] = instructions
+    curDic[name] = drugDic
+
+    # concerned with atomicity?
+    if update_entry(userId, 'Medication', curDic):
+        return "success"
+    return "failure"
+
+def take_med(userId: str, index: int):
+
+    dailySchedule = get_user_data(userId)['daily_schedule']
+    if not (index < 0 or index >= len(dailySchedule)):
+        del dailySchedule[index]
+        update_entry(userId, "daily_schedule", dailySchedule)
+        return "success" 
+    else:
+        return "Bad index"
+    
+def addToStaticSchedule(userId: str, medicDic):
+    data = get_user_data(userId)
+    statSchedule = data['static_schedule']
+    statSchedule.append(medicDic)
+    statSchedule.sort(key=lambda x: x['time'], reverse=True)
+    
+    date_format = '%H:%M'
+    res = sorted(statSchedule, key=lambda x: datetime.strptime(x['time'], date_format))
+    update_entry(userId, 'static_schedule', res)
+    
+def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
+    data = get_user_data(userId)
+    data1 = data['provider']
+    refills = data1['refill_requests']
 
     drugDic = {}
     drugDic['completed'] = False
@@ -86,24 +134,12 @@ def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructi
     
     refills.append(drugDic)
 
-    if update_entry(userId, 'refill-requests', refills): return "success"
+    if update_provider_entry(userId, 'refill_requests', refills): return "success"
     else: return "fail"
 
-def repopulateDailySchedule(userId):
+def repopulateDailySchedule(userId: str):
     data = get_user_data(userId)
     statSchedule = data['static_schedule']
-    print(statSchedule)
-    if update_entry(userId, 'daily_schedule', statSchedule):
-        return "success"
-    return "failure"
+    update_entry(userId, 'daily_schedule', statSchedule)
 
-def take_med(userId: str, index: int):
-
-    dailySchedule = get_user_data(userId)['daily_schedule']
-    print(dailySchedule)
-    if not (index < 0 or index >= len(dailySchedule)):
-        del dailySchedule[index]
-        update_entry(userId, "daily_schedule", dailySchedule)
-        return "success" 
-    else:
-        return "Bad index"
+#requestRefill('1', 'test', ['7:00'], '10mg', 'eat fast')
