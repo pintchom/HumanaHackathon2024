@@ -75,19 +75,13 @@ def repopulateDailySchedule(userId):
         return "success"
     return "failure"
 
-def take_med(userId: str, med: str, time: str):
+def take_med(userId: str, index: int):
 
-    curDic = get_user_data(userId)['daily_schedule']
-    idx = -1
-    for index, m in enumerate(curDic):
-        if m.get("medication") == med and m.get("time") == time: 
-            idx = index
-            break
-    
-    if idx != -1: 
-        del curDic[idx]
-        print(curDic)
-        update_entry(userId, "daily_schedule", curDic)
+    dailySchedule = get_user_data(userId)['daily_schedule']
+    print(dailySchedule)
+    if not (index < 0 or index >= len(dailySchedule)):
+        del dailySchedule[index]
+        update_entry(userId, "daily_schedule", dailySchedule)
         return "success" 
     else:
-        return "didnt find medication"
+        return "Bad index"

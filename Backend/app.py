@@ -50,9 +50,8 @@ def request_refill():
 def take_med():
     data = request.get_json()
     userId = data.get('userId')
-    med_name = data.get('medName')
-    time = data.get('time')
+    index = data.get('index')
 
-    result = fb.take_med(userId, med_name, time)
+    result = fb.take_med(userId, index)
     
     return jsonify(result)
