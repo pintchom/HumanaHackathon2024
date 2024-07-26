@@ -48,8 +48,24 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
         return "success"
     else:
         return "failure"
+    
+def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
+    data = get_user_data(userId)
+    refills = data['refill-requests']
 
-def repopulateDailySchedule(self, userId):
+    drugDic = {}
+    drugDic['completed'] = False
+    drugDic['daily_schedule'] = daily_schedule
+    drugDic['dosage'] = dosage
+    drugDic['empty'] = False
+    drugDic['instructions'] = instructions
+    
+    refills.append(drugDic)
+
+    if update_entry(userId, 'refill-requests', refills): return "success"
+    else: return "fail"
+
+def repopulateDailySchedule(userId):
     data = get_user_data(userId)
     statSchedule = data['static-schedule']
     update_entry(userId, 'daily-schedule', statSchedule)
