@@ -3,11 +3,11 @@ from click.types import STRING
 from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
-from flask.scaffold import T_route
+from datetime import datetime
 
 load_dotenv()
 
-cred = credentials.Certificate("humanahackathon-24-firebase-adminsdk-hqhjz-4d0d73b64b.json")
+cred = credentials.Certificate("/Users/alexanderding/Desktop/HumanaHackathon2024/Backend/humanahackathon-24-firebase-adminsdk-hqhjz-4d0d73b64b.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
@@ -44,10 +44,20 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     curDic[name] = drugDic
 
     # concerned with atomicity?
-    if update_entry(userId, 'Medication', curDic) and update_entry(userId, 'static-schedule', curDic):
+    if update_entry(userId, 'Medication', curDic) and addToStaticSchedule(userId, curDic):
         return "success"
     else:
         return "failure"
+    
+def addToStaticSchedule(userId: str, medicDic):
+    data = get_user_data(userId)
+    statSchedule = data['static-schedule']
+    statSchedule.append(medicDic)
+    statSchedule.sort(key=lambda x: x['time'], reverse=True)
+    
+    date_format = '%H:%M'
+    res = sorted(statSchedule, key=lambda x: datetime.strptime(x['time'], date_format))
+    update_entry(userId, 'static-schedule', res)
     
 def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     data = get_user_data(userId)
@@ -65,7 +75,7 @@ def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructi
     if update_entry(userId, 'refill-requests', refills): return "success"
     else: return "fail"
 
-def repopulateDailySchedule(userId):
+def repopulateDailySchedule(userId: str):
     data = get_user_data(userId)
     statSchedule = data['static-schedule']
     update_entry(userId, 'daily-schedule', statSchedule)
