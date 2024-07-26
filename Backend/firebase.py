@@ -22,11 +22,13 @@ def get_user_data(userId: str):
         print(f"No user found with id: {userId}")
         return {}
 
-def update_entry(userId: str, field: str, newVal: str) -> bool:
+def update_entry(userId: str, field: str, newVal) -> bool:
     try:
-        db.collection('users').document(userId).update({field: newVal})
+        userRef = db.collection('users').document(userId)
+        userRef.update({field: newVal})  
         return True
-    except:
+    except Exception as e:
+        print(f"Error updating entry: {e}")  
         return False
 
 def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
@@ -42,7 +44,33 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     drugDic['instructions'] = instructions
     curDic[name] = drugDic
     print(curDic)
+
+    # concerned with atomicity?
     if update_entry(userId, 'Medication', curDic):
         return "success"
     else:
         return "failure"
+    
+def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
+    data = get_user_data(userId)
+    refills = data['provider']['refill-requests']
+
+    drugDic = {}
+    drugDic['completed'] = False
+    drugDic['daily_schedule'] = daily_schedule
+    drugDic['dosage'] = dosage
+    drugDic['empty'] = False
+    drugDic['instructions'] = instructions
+    
+    refills.append(drugDic)
+
+    if update_entry(userId, 'refill-requests', refills): return "success"
+    else: return "fail"
+
+def repopulateDailySchedule(userId):
+    data = get_user_data(userId)
+    statSchedule = data['static_schedule']
+    print(statSchedule)
+    if update_entry(userId, 'daily_schedule', statSchedule):
+        return "success"
+    return "failure"

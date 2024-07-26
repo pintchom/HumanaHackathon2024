@@ -26,3 +26,22 @@ def add_medication():
     instructions = data.get('instructions')
     returnMessage = fb.addMedication(userId, name, daily_schedule, dosage, instructions)
     return jsonify(returnMessage)
+
+
+@app.route('/reset-schedule', methods=['POST'])
+def reset_schedule():
+    data = request.get_json()
+    userId = data.get('userId')
+    returnMessage = fb.repopulateDailySchedule(userId)
+    return jsonify(returnMessage)
+
+@app.route('/request-refill', methods=['POST'])
+def request_refill():
+    data = request.get_json()
+    userId = data.get('userId')
+    name = data.get('name')
+    daily_schedule = data.get('daily-schedule')
+    dosage = data.get('dosage')
+    instructions = data.get('instructions')
+    returnMessage = fb.requestRefill(userId, name, daily_schedule, dosage, instructions)
+    return jsonify(returnMessage)
