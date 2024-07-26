@@ -15,3 +15,14 @@ def get_data():
     userId = data.get('userId')
     userData = fb.get_user_data(userId)
     return jsonify(userData)
+
+@app.route('/add-medication', methods=['POST'])
+def add_medication():
+    data = request.get_json()
+    userId = data.get('userId')
+    name = data.get('name')
+    daily_schedule = data.get('daily-schedule')
+    dosage = data.get('dosage')
+    instructions = data.get('instructions')
+    returnMessage = fb.addMedication(userId, name, daily_schedule, dosage, instructions)
+    return jsonify(returnMessage)
