@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import firebase as fb
 
 app = Flask(__name__)
 
