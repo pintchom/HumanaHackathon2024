@@ -36,7 +36,7 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     if name in curDic.keys(): return "Medication already in database"
     drugDic = {}
     drugDic['completed'] = False
-    drugDic['daily_schedule'] = daily_schedule
+    drugDic['daily-schedule'] = daily_schedule
     drugDic['dosage'] = dosage
     drugDic['empty'] = False
     drugDic['instructions'] = instructions
