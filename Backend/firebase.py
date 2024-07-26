@@ -51,17 +51,17 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     
 def addToStaticSchedule(userId: str, medicDic):
     data = get_user_data(userId)
-    statSchedule = data['static-schedule']
+    statSchedule = data['static_schedule']
     statSchedule.append(medicDic)
     statSchedule.sort(key=lambda x: x['time'], reverse=True)
     
     date_format = '%H:%M'
     res = sorted(statSchedule, key=lambda x: datetime.strptime(x['time'], date_format))
-    update_entry(userId, 'static-schedule', res)
+    update_entry(userId, 'static_schedule', res)
     
 def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     data = get_user_data(userId)
-    refills = data['refill-requests']
+    refills = data['refill_requests']
 
     drugDic = {}
     drugDic['completed'] = False
@@ -77,5 +77,5 @@ def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructi
 
 def repopulateDailySchedule(userId: str):
     data = get_user_data(userId)
-    statSchedule = data['static-schedule']
-    update_entry(userId, 'daily-schedule', statSchedule)
+    statSchedule = data['static_schedule']
+    update_entry(userId, 'daily_schedule', statSchedule)
