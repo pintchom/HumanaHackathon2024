@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AAAA9392C53C658005F85F6 /* PillboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9382C53C658005F85F6 /* PillboxApp.swift */; };
+		0AAAA93D2C53C659005F85F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAAA93C2C53C659005F85F6 /* Assets.xcassets */; };
+		0AAAA9402C53C659005F85F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAAA93F2C53C659005F85F6 /* Preview Assets.xcassets */; };
+		0AAAA94A2C53C659005F85F6 /* PillboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9492C53C659005F85F6 /* PillboxTests.swift */; };
+		0AAAA9542C53C659005F85F6 /* PillboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9532C53C659005F85F6 /* PillboxUITests.swift */; };
+		0AAAA9562C53C659005F85F6 /* PillboxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9552C53C659005F85F6 /* PillboxUITestsLaunchTests.swift */; };
+		0AAAA9632C53CD8D005F85F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9622C53CD8D005F85F6 /* HomeView.swift */; };
+		0AAAA9662C53CDCD005F85F6 /* logicCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9652C53CDCD005F85F6 /* logicCalls.swift */; };
+		0AAAA9682C53D5FA005F85F6 /* MedicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9672C53D5FA005F85F6 /* MedicationsView.swift */; };
+		0AAAA96A2C53D603005F85F6 /* ProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9692C53D603005F85F6 /* ProviderView.swift */; };
+		0AAAA96C2C53DEC3005F85F6 /* AddMedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA96B2C53DEC3005F85F6 /* AddMedicationView.swift */; };
+		0AAAA96E2C53DEFB005F85F6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA96D2C53DEFB005F85F6 /* HistoryView.swift */; };
+		0AAAA9712C53F3D4005F85F6 /* MedicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9702C53F3D4005F85F6 /* MedicationStorage.swift */; };
+		0AAAA9732C541274005F85F6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAA9722C541274005F85F6 /* UserData.swift */; };
+		0AAAA9762C541317005F85F6 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0AAAA9752C541317005F85F6 /* ConfettiSwiftUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AAAA9462C53C659005F85F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAAA92D2C53C657005F85F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAAA9342C53C657005F85F6;
+			remoteInfo = Pillbox;
+		};
+		0AAAA9502C53C659005F85F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAAA92D2C53C657005F85F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAAA9342C53C657005F85F6;
+			remoteInfo = Pillbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AAAA9352C53C658005F85F6 /* Pillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAAA9382C53C658005F85F6 /* PillboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillboxApp.swift; sourceTree = "<group>"; };
+		0AAAA93C2C53C659005F85F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AAAA93F2C53C659005F85F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AAAA9452C53C659005F85F6 /* PillboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAAA9492C53C659005F85F6 /* PillboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillboxTests.swift; sourceTree = "<group>"; };
+		0AAAA94F2C53C659005F85F6 /* PillboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAAA9532C53C659005F85F6 /* PillboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillboxUITests.swift; sourceTree = "<group>"; };
+		0AAAA9552C53C659005F85F6 /* PillboxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillboxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AAAA9622C53CD8D005F85F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0AAAA9652C53CDCD005F85F6 /* logicCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logicCalls.swift; sourceTree = "<group>"; };
+		0AAAA9672C53D5FA005F85F6 /* MedicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationsView.swift; sourceTree = "<group>"; };
+		0AAAA9692C53D603005F85F6 /* ProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderView.swift; sourceTree = "<group>"; };
+		0AAAA96B2C53DEC3005F85F6 /* AddMedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationView.swift; sourceTree = "<group>"; };
+		0AAAA96D2C53DEFB005F85F6 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		0AAAA9702C53F3D4005F85F6 /* MedicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationStorage.swift; sourceTree = "<group>"; };
+		0AAAA9722C541274005F85F6 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AAAA9322C53C657005F85F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAAA9762C541317005F85F6 /* ConfettiSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA9422C53C659005F85F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA94C2C53C659005F85F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AAAA92C2C53C657005F85F6 = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9372C53C658005F85F6 /* Pillbox */,
+				0AAAA9482C53C659005F85F6 /* PillboxTests */,
+				0AAAA9522C53C659005F85F6 /* PillboxUITests */,
+				0AAAA9362C53C658005F85F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AAAA9362C53C658005F85F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9352C53C658005F85F6 /* Pillbox.app */,
+				0AAAA9452C53C659005F85F6 /* PillboxTests.xctest */,
+				0AAAA94F2C53C659005F85F6 /* PillboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AAAA9372C53C658005F85F6 /* Pillbox */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9382C53C658005F85F6 /* PillboxApp.swift */,
+				0AAAA96F2C53F3C8005F85F6 /* Storage */,
+				0AAAA9642C53CDBC005F85F6 /* Functions */,
+				0AAAA9622C53CD8D005F85F6 /* HomeView.swift */,
+				0AAAA9672C53D5FA005F85F6 /* MedicationsView.swift */,
+				0AAAA96B2C53DEC3005F85F6 /* AddMedicationView.swift */,
+				0AAAA96D2C53DEFB005F85F6 /* HistoryView.swift */,
+				0AAAA9692C53D603005F85F6 /* ProviderView.swift */,
+				0AAAA93C2C53C659005F85F6 /* Assets.xcassets */,
+				0AAAA93E2C53C659005F85F6 /* Preview Content */,
+			);
+			path = Pillbox;
+			sourceTree = "<group>";
+		};
+		0AAAA93E2C53C659005F85F6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA93F2C53C659005F85F6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AAAA9482C53C659005F85F6 /* PillboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9492C53C659005F85F6 /* PillboxTests.swift */,
+			);
+			path = PillboxTests;
+			sourceTree = "<group>";
+		};
+		0AAAA9522C53C659005F85F6 /* PillboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9532C53C659005F85F6 /* PillboxUITests.swift */,
+				0AAAA9552C53C659005F85F6 /* PillboxUITestsLaunchTests.swift */,
+			);
+			path = PillboxUITests;
+			sourceTree = "<group>";
+		};
+		0AAAA9642C53CDBC005F85F6 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9652C53CDCD005F85F6 /* logicCalls.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		0AAAA96F2C53F3C8005F85F6 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0AAAA9702C53F3D4005F85F6 /* MedicationStorage.swift */,
+				0AAAA9722C541274005F85F6 /* UserData.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AAAA9342C53C657005F85F6 /* Pillbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAAA9592C53C659005F85F6 /* Build configuration list for PBXNativeTarget "Pillbox" */;
+			buildPhases = (
+				0AAAA9312C53C657005F85F6 /* Sources */,
+				0AAAA9322C53C657005F85F6 /* Frameworks */,
+				0AAAA9332C53C657005F85F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pillbox;
+			packageProductDependencies = (
+				0AAAA9752C541317005F85F6 /* ConfettiSwiftUI */,
+			);
+			productName = Pillbox;
+			productReference = 0AAAA9352C53C658005F85F6 /* Pillbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AAAA9442C53C659005F85F6 /* PillboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAAA95C2C53C659005F85F6 /* Build configuration list for PBXNativeTarget "PillboxTests" */;
+			buildPhases = (
+				0AAAA9412C53C659005F85F6 /* Sources */,
+				0AAAA9422C53C659005F85F6 /* Frameworks */,
+				0AAAA9432C53C659005F85F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAAA9472C53C659005F85F6 /* PBXTargetDependency */,
+			);
+			name = PillboxTests;
+			productName = PillboxTests;
+			productReference = 0AAAA9452C53C659005F85F6 /* PillboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AAAA94E2C53C659005F85F6 /* PillboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAAA95F2C53C659005F85F6 /* Build configuration list for PBXNativeTarget "PillboxUITests" */;
+			buildPhases = (
+				0AAAA94B2C53C659005F85F6 /* Sources */,
+				0AAAA94C2C53C659005F85F6 /* Frameworks */,
+				0AAAA94D2C53C659005F85F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAAA9512C53C659005F85F6 /* PBXTargetDependency */,
+			);
+			name = PillboxUITests;
+			productName = PillboxUITests;
+			productReference = 0AAAA94F2C53C659005F85F6 /* PillboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AAAA92D2C53C657005F85F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0AAAA9342C53C657005F85F6 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					0AAAA9442C53C659005F85F6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0AAAA9342C53C657005F85F6;
+					};
+					0AAAA94E2C53C659005F85F6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0AAAA9342C53C657005F85F6;
+					};
+				};
+			};
+			buildConfigurationList = 0AAAA9302C53C657005F85F6 /* Build configuration list for PBXProject "Pillbox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AAAA92C2C53C657005F85F6;
+			packageReferences = (
+				0AAAA9742C541317005F85F6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
+			productRefGroup = 0AAAA9362C53C658005F85F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AAAA9342C53C657005F85F6 /* Pillbox */,
+				0AAAA9442C53C659005F85F6 /* PillboxTests */,
+				0AAAA94E2C53C659005F85F6 /* PillboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AAAA9332C53C657005F85F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAAA9402C53C659005F85F6 /* Preview Assets.xcassets in Resources */,
+				0AAAA93D2C53C659005F85F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA9432C53C659005F85F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA94D2C53C659005F85F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AAAA9312C53C657005F85F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAAA96E2C53DEFB005F85F6 /* HistoryView.swift in Sources */,
+				0AAAA9662C53CDCD005F85F6 /* logicCalls.swift in Sources */,
+				0AAAA9632C53CD8D005F85F6 /* HomeView.swift in Sources */,
+				0AAAA9732C541274005F85F6 /* UserData.swift in Sources */,
+				0AAAA96A2C53D603005F85F6 /* ProviderView.swift in Sources */,
+				0AAAA9712C53F3D4005F85F6 /* MedicationStorage.swift in Sources */,
+				0AAAA9392C53C658005F85F6 /* PillboxApp.swift in Sources */,
+				0AAAA9682C53D5FA005F85F6 /* MedicationsView.swift in Sources */,
+				0AAAA96C2C53DEC3005F85F6 /* AddMedicationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA9412C53C659005F85F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAAA94A2C53C659005F85F6 /* PillboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAAA94B2C53C659005F85F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAAA9542C53C659005F85F6 /* PillboxUITests.swift in Sources */,
+				0AAAA9562C53C659005F85F6 /* PillboxUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AAAA9472C53C659005F85F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAAA9342C53C657005F85F6 /* Pillbox */;
+			targetProxy = 0AAAA9462C53C659005F85F6 /* PBXContainerItemProxy */;
+		};
+		0AAAA9512C53C659005F85F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAAA9342C53C657005F85F6 /* Pillbox */;
+			targetProxy = 0AAAA9502C53C659005F85F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AAAA9572C53C659005F85F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AAAA9582C53C659005F85F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AAAA95A2C53C659005F85F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pillbox/Preview Content\"";
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.Pillbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AAAA95B2C53C659005F85F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pillbox/Preview Content\"";
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.Pillbox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AAAA95D2C53C659005F85F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pillbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pillbox";
+			};
+			name = Debug;
+		};
+		0AAAA95E2C53C659005F85F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pillbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pillbox";
+			};
+			name = Release;
+		};
+		0AAAA9602C53C659005F85F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pillbox;
+			};
+			name = Debug;
+		};
+		0AAAA9612C53C659005F85F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pillbox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AAAA9302C53C657005F85F6 /* Build configuration list for PBXProject "Pillbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAAA9572C53C659005F85F6 /* Debug */,
+				0AAAA9582C53C659005F85F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAAA9592C53C659005F85F6 /* Build configuration list for PBXNativeTarget "Pillbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAAA95A2C53C659005F85F6 /* Debug */,
+				0AAAA95B2C53C659005F85F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAAA95C2C53C659005F85F6 /* Build configuration list for PBXNativeTarget "PillboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAAA95D2C53C659005F85F6 /* Debug */,
+				0AAAA95E2C53C659005F85F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAAA95F2C53C659005F85F6 /* Build configuration list for PBXNativeTarget "PillboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAAA9602C53C659005F85F6 /* Debug */,
+				0AAAA9612C53C659005F85F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AAAA9742C541317005F85F6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AAAA9752C541317005F85F6 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AAAA9742C541317005F85F6 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0AAAA92D2C53C657005F85F6 /* Project object */;
+}
