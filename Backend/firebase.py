@@ -30,10 +30,11 @@ def update_entry(userId: str, field: str, newVal: str) -> bool:
         return False
 
 def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
-    print(daily_schedule)
     curDic = get_user_data(userId)
     curDic = curDic["Medication"]
+
     if name in curDic.keys(): return "Medication already in database"
+
     drugDic = {}
     drugDic['completed'] = False
     drugDic['daily_schedule'] = daily_schedule
@@ -41,8 +42,14 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     drugDic['empty'] = False
     drugDic['instructions'] = instructions
     curDic[name] = drugDic
-    print(curDic)
-    if update_entry(userId, 'Medication', curDic):
+
+    # concerned with atomicity?
+    if update_entry(userId, 'Medication', curDic) and update_entry(userId, 'static-schedule', curDic):
         return "success"
     else:
         return "failure"
+
+def repopulateDailySchedule(self, userId):
+    data = get_user_data(userId)
+    statSchedule = data['static-schedule']
+    update_entry(userId, 'daily-schedule', statSchedule)
