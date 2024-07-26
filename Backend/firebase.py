@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
 from flask.scaffold import T_route
+from datetime import datetime
+
 
 load_dotenv()
 
@@ -17,6 +19,7 @@ def get_user_data(userId: str):
 
     if user_doc.exists:
         user_data = user_doc.to_dict()
+        print(user_data)
         return user_data
     else:
         print(f"No user found with id: {userId}")
@@ -33,20 +36,39 @@ def update_entry(userId: str, field: str, newVal) -> bool:
 
 def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
     print(daily_schedule)
-    curDic = get_user_data(userId)
-    curDic = curDic["Medication"]
-    if name in curDic.keys(): return "Medication already in database"
-    drugDic = {}
-    drugDic['completed'] = False
-    drugDic['daily-schedule'] = daily_schedule
-    drugDic['dosage'] = dosage
-    drugDic['empty'] = False
-    drugDic['instructions'] = instructions
+    userData = get_user_data(userId)
+    curDic = userData.get("Medication", {})
+    if name in curDic.keys(): 
+        return "Medication already in database"
+    
+    drugDic = {
+        'completed': False,
+        'daily-schedule': daily_schedule,
+        'dosage': dosage,
+        'empty': False,
+        'instructions': instructions
+    }
     curDic[name] = drugDic
     print(curDic)
 
-    # concerned with atomicity?
-    if update_entry(userId, 'Medication', curDic):
+    # Get the static_schedule from the root of userData, not from curDic
+    static_schedule = userData.get("static_schedule", [])
+    print("Current static schedule:", static_schedule)
+    
+    for time in daily_schedule:
+        tempDict = {
+            'time': time,
+            'dosage': dosage,
+            'instructions': instructions,
+            'medication': name
+        }
+        static_schedule.append(tempDict)
+    
+    static_schedule.sort(key=lambda x: datetime.strptime(x['time'], '%H:%M'))
+    print("Updated static schedule:", static_schedule)
+
+    # Update both Medication and static_schedule
+    if update_entry(userId, 'Medication', curDic) and update_entry(userId, "static_schedule", static_schedule):
         return "success"
     else:
         return "failure"
