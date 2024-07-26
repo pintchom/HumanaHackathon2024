@@ -96,3 +96,14 @@ def repopulateDailySchedule(userId):
     if update_entry(userId, 'daily_schedule', statSchedule):
         return "success"
     return "failure"
+
+def take_med(userId: str, index: int):
+
+    dailySchedule = get_user_data(userId)['daily_schedule']
+    print(dailySchedule)
+    if not (index < 0 or index >= len(dailySchedule)):
+        del dailySchedule[index]
+        update_entry(userId, "daily_schedule", dailySchedule)
+        return "success" 
+    else:
+        return "Bad index"
