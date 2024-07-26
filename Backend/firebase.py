@@ -33,10 +33,9 @@ def update_provider_entry(userId: str, field: str, newVal: str) -> bool:
     try:
         data = get_user_data(userId)
         data1 = data['provider']
-        dataToEdit = data1[field]
-        dataToEdit[field] = newVal
+        data1[field] = newVal
 
-        db.collection('users').document(userId).update({'provider': dataToEdit})
+        db.collection('users').document(userId).update({'provider': data1})
         return True
     except:
         return False
