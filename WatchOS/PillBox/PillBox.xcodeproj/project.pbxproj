@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AF770692C541A830070C530 /* PillBox Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0AF770682C541A830070C530 /* PillBox Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0AF7706E2C541A830070C530 /* PillBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7706D2C541A830070C530 /* PillBoxApp.swift */; };
+		0AF770702C541A830070C530 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7706F2C541A830070C530 /* ContentView.swift */; };
+		0AF770722C541A850070C530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF770712C541A850070C530 /* Assets.xcassets */; };
+		0AF770752C541A850070C530 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF770742C541A850070C530 /* Preview Assets.xcassets */; };
+		0AF7707F2C541A850070C530 /* PillBox_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7707E2C541A850070C530 /* PillBox_Watch_AppTests.swift */; };
+		0AF770892C541A850070C530 /* PillBox_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF770882C541A850070C530 /* PillBox_Watch_AppUITests.swift */; };
+		0AF7708B2C541A850070C530 /* PillBox_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7708A2C541A850070C530 /* PillBox_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AF7706A2C541A830070C530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF7705C2C541A830070C530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF770672C541A830070C530;
+			remoteInfo = "PillBox Watch App";
+		};
+		0AF7707B2C541A850070C530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF7705C2C541A830070C530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF770672C541A830070C530;
+			remoteInfo = "PillBox Watch App";
+		};
+		0AF770852C541A850070C530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF7705C2C541A830070C530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF770672C541A830070C530;
+			remoteInfo = "PillBox Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AF770912C541A850070C530 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0AF770692C541A830070C530 /* PillBox Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0AF770622C541A830070C530 /* PillBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF770682C541A830070C530 /* PillBox Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PillBox Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF7706D2C541A830070C530 /* PillBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxApp.swift; sourceTree = "<group>"; };
+		0AF7706F2C541A830070C530 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0AF770712C541A850070C530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AF770742C541A850070C530 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AF7707A2C541A850070C530 /* PillBox Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PillBox Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF7707E2C541A850070C530 /* PillBox_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBox_Watch_AppTests.swift; sourceTree = "<group>"; };
+		0AF770842C541A850070C530 /* PillBox Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PillBox Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF770882C541A850070C530 /* PillBox_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBox_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		0AF7708A2C541A850070C530 /* PillBox_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBox_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AF770652C541A830070C530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770772C541A850070C530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770812C541A850070C530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AF7705B2C541A830070C530 = {
+			isa = PBXGroup;
+			children = (
+				0AF7706C2C541A830070C530 /* PillBox Watch App */,
+				0AF7707D2C541A850070C530 /* PillBox Watch AppTests */,
+				0AF770872C541A850070C530 /* PillBox Watch AppUITests */,
+				0AF770632C541A830070C530 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AF770632C541A830070C530 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AF770622C541A830070C530 /* PillBox.app */,
+				0AF770682C541A830070C530 /* PillBox Watch App.app */,
+				0AF7707A2C541A850070C530 /* PillBox Watch AppTests.xctest */,
+				0AF770842C541A850070C530 /* PillBox Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AF7706C2C541A830070C530 /* PillBox Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0AF7706D2C541A830070C530 /* PillBoxApp.swift */,
+				0AF7706F2C541A830070C530 /* ContentView.swift */,
+				0AF770712C541A850070C530 /* Assets.xcassets */,
+				0AF770732C541A850070C530 /* Preview Content */,
+			);
+			path = "PillBox Watch App";
+			sourceTree = "<group>";
+		};
+		0AF770732C541A850070C530 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0AF770742C541A850070C530 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AF7707D2C541A850070C530 /* PillBox Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF7707E2C541A850070C530 /* PillBox_Watch_AppTests.swift */,
+			);
+			path = "PillBox Watch AppTests";
+			sourceTree = "<group>";
+		};
+		0AF770872C541A850070C530 /* PillBox Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF770882C541A850070C530 /* PillBox_Watch_AppUITests.swift */,
+				0AF7708A2C541A850070C530 /* PillBox_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "PillBox Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AF770612C541A830070C530 /* PillBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF770922C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox" */;
+			buildPhases = (
+				0AF770602C541A830070C530 /* Resources */,
+				0AF770912C541A850070C530 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF7706B2C541A830070C530 /* PBXTargetDependency */,
+			);
+			name = PillBox;
+			productName = PillBox;
+			productReference = 0AF770622C541A830070C530 /* PillBox.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		0AF770672C541A830070C530 /* PillBox Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF7708E2C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch App" */;
+			buildPhases = (
+				0AF770642C541A830070C530 /* Sources */,
+				0AF770652C541A830070C530 /* Frameworks */,
+				0AF770662C541A830070C530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PillBox Watch App";
+			productName = "PillBox Watch App";
+			productReference = 0AF770682C541A830070C530 /* PillBox Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AF770792C541A850070C530 /* PillBox Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF770952C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch AppTests" */;
+			buildPhases = (
+				0AF770762C541A850070C530 /* Sources */,
+				0AF770772C541A850070C530 /* Frameworks */,
+				0AF770782C541A850070C530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF7707C2C541A850070C530 /* PBXTargetDependency */,
+			);
+			name = "PillBox Watch AppTests";
+			productName = "PillBox Watch AppTests";
+			productReference = 0AF7707A2C541A850070C530 /* PillBox Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AF770832C541A850070C530 /* PillBox Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF770982C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch AppUITests" */;
+			buildPhases = (
+				0AF770802C541A850070C530 /* Sources */,
+				0AF770812C541A850070C530 /* Frameworks */,
+				0AF770822C541A850070C530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF770862C541A850070C530 /* PBXTargetDependency */,
+			);
+			name = "PillBox Watch AppUITests";
+			productName = "PillBox Watch AppUITests";
+			productReference = 0AF770842C541A850070C530 /* PillBox Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AF7705C2C541A830070C530 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0AF770612C541A830070C530 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					0AF770672C541A830070C530 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					0AF770792C541A850070C530 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0AF770672C541A830070C530;
+					};
+					0AF770832C541A850070C530 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0AF770672C541A830070C530;
+					};
+				};
+			};
+			buildConfigurationList = 0AF7705F2C541A830070C530 /* Build configuration list for PBXProject "PillBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AF7705B2C541A830070C530;
+			productRefGroup = 0AF770632C541A830070C530 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AF770612C541A830070C530 /* PillBox */,
+				0AF770672C541A830070C530 /* PillBox Watch App */,
+				0AF770792C541A850070C530 /* PillBox Watch AppTests */,
+				0AF770832C541A850070C530 /* PillBox Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AF770602C541A830070C530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770662C541A830070C530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF770752C541A850070C530 /* Preview Assets.xcassets in Resources */,
+				0AF770722C541A850070C530 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770782C541A850070C530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770822C541A850070C530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AF770642C541A830070C530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF770702C541A830070C530 /* ContentView.swift in Sources */,
+				0AF7706E2C541A830070C530 /* PillBoxApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770762C541A850070C530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF7707F2C541A850070C530 /* PillBox_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF770802C541A850070C530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF770892C541A850070C530 /* PillBox_Watch_AppUITests.swift in Sources */,
+				0AF7708B2C541A850070C530 /* PillBox_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AF7706B2C541A830070C530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF770672C541A830070C530 /* PillBox Watch App */;
+			targetProxy = 0AF7706A2C541A830070C530 /* PBXContainerItemProxy */;
+		};
+		0AF7707C2C541A850070C530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF770672C541A830070C530 /* PillBox Watch App */;
+			targetProxy = 0AF7707B2C541A850070C530 /* PBXContainerItemProxy */;
+		};
+		0AF770862C541A850070C530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF770672C541A830070C530 /* PillBox Watch App */;
+			targetProxy = 0AF770852C541A850070C530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AF7708C2C541A850070C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AF7708D2C541A850070C530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		0AF7708F2C541A850070C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PillBox Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillBox.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		0AF770902C541A850070C530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PillBox Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillBox.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		0AF770932C541A850070C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0AF770942C541A850070C530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				INFOPLIST_KEY_CFBundleDisplayName = PillBox;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pillbox.PillBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AF770962C541A850070C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pillbox.PillBox-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillBox Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillBox Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		0AF770972C541A850070C530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pillbox.PillBox-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillBox Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillBox Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		0AF770992C541A850070C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pillbox.PillBox-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "PillBox Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		0AF7709A2C541A850070C530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z3BPYU7FG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pillbox.PillBox-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "PillBox Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AF7705F2C541A830070C530 /* Build configuration list for PBXProject "PillBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF7708C2C541A850070C530 /* Debug */,
+				0AF7708D2C541A850070C530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF7708E2C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF7708F2C541A850070C530 /* Debug */,
+				0AF770902C541A850070C530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF770922C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF770932C541A850070C530 /* Debug */,
+				0AF770942C541A850070C530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF770952C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF770962C541A850070C530 /* Debug */,
+				0AF770972C541A850070C530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF770982C541A850070C530 /* Build configuration list for PBXNativeTarget "PillBox Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF770992C541A850070C530 /* Debug */,
+				0AF7709A2C541A850070C530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AF7705C2C541A830070C530 /* Project object */;
+}

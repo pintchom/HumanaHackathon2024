@@ -79,26 +79,6 @@ def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructi
     else:
         return "failure"
     
-def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
-    data = get_user_data(userId)
-    refills = data['provider']['refill-requests']
-    curDic = get_user_data(userId)
-    curDic = curDic["Medication"]
-
-    if name in curDic.keys(): return "Medication already in database"
-
-    drugDic = {}
-    drugDic['completed'] = False
-    drugDic['daily_schedule'] = daily_schedule
-    drugDic['dosage'] = dosage
-    drugDic['empty'] = False
-    drugDic['instructions'] = instructions
-    curDic[name] = drugDic
-
-    # concerned with atomicity?
-    if update_entry(userId, 'Medication', curDic):
-        return "success"
-    return "failure"
 
 def take_med(userId: str, index: int):
 
@@ -130,6 +110,7 @@ def requestRefill(userId: str, name: str, daily_schedule, dosage: str, instructi
     drugDic['daily_schedule'] = daily_schedule
     drugDic['dosage'] = dosage
     drugDic['empty'] = False
+    drugDic['name'] = name
     drugDic['instructions'] = instructions
     
     refills.append(drugDic)
