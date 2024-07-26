@@ -74,3 +74,20 @@ def repopulateDailySchedule(userId):
     if update_entry(userId, 'daily_schedule', statSchedule):
         return "success"
     return "failure"
+
+def take_med(userId: str, med: str, time: str):
+
+    curDic = get_user_data(userId)['daily_schedule']
+    idx = -1
+    for index, m in enumerate(curDic):
+        if m.get("medication") == med and m.get("time") == time: 
+            idx = index
+            break
+    
+    if idx != -1: 
+        del curDic[idx]
+        print(curDic)
+        update_entry(userId, "daily_schedule", curDic)
+        return "success" 
+    else:
+        return "didnt find medication"

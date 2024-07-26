@@ -45,3 +45,14 @@ def request_refill():
     instructions = data.get('instructions')
     returnMessage = fb.requestRefill(userId, name, daily_schedule, dosage, instructions)
     return jsonify(returnMessage)
+
+@app.route('/take-med', methods=['POST'])
+def take_med():
+    data = request.get_json()
+    userId = data.get('userId')
+    med_name = data.get('medName')
+    time = data.get('time')
+
+    result = fb.take_med(userId, med_name, time)
+    
+    return jsonify(result)
