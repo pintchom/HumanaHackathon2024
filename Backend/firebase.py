@@ -3,6 +3,7 @@ from click.types import STRING
 from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
+from flask.scaffold import T_route
 
 load_dotenv()
 
@@ -19,4 +20,29 @@ def get_user_data(userId: str):
         return user_data
     else:
         print(f"No user found with id: {userId}")
-        return None
+        return {}
+
+def update_entry(userId: str, field: str, newVal: str) -> bool:
+    try:
+        db.collection('users').document(userId).update({field: newVal})
+        return True
+    except:
+        return False
+
+def addMedication(userId: str, name: str, daily_schedule, dosage: str, instructions: str):
+    print(daily_schedule)
+    curDic = get_user_data(userId)
+    curDic = curDic["Medication"]
+    if name in curDic.keys(): return "Medication already in database"
+    drugDic = {}
+    drugDic['completed'] = False
+    drugDic['daily_schedule'] = daily_schedule
+    drugDic['dosage'] = dosage
+    drugDic['empty'] = False
+    drugDic['instructions'] = instructions
+    curDic[name] = drugDic
+    print(curDic)
+    if update_entry(userId, 'Medication', curDic):
+        return "success"
+    else:
+        return "failure"
